@@ -24,7 +24,7 @@ const Home = () => {
     const fetchPosts = async () => {
       setLoading(true)
       try {
-        const response = await fetch('http://localhost:8000/api/v1/post', {
+        const response = await fetch('https://ai-image-generator-qlss.onrender.com/api/v1/post', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'
@@ -48,7 +48,7 @@ const Home = () => {
 
     setSearchTimeout(
       setTimeout(() => {
-        const searchedResult = allPosts.filter((item) => item.name.toLowerCase().includes(searchText.toLowerCase()) || item,prompt.toLowerCase().includes(searchText.toLowerCase()));
+        const searchedResult = allPosts.filter((item) => item.name.toLowerCase().includes(searchText.toLowerCase()) || item.prompt.toLowerCase().includes(searchText.toLowerCase()));
         
         setSearchedResults(searchedResult);
       }, 500)
