@@ -54,7 +54,7 @@ const Home = () => {
       }, 500)
     )
   }
-  console.log(allPosts)
+  
   return (
     <section className='max-w-7xl mx-auto'>
       <div>
@@ -85,7 +85,7 @@ const Home = () => {
                 Showing results for <span className='text-[#222328]'>{searchText}</span> 
               </h2>
             )}
-            <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2">
+            <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 gap-3">
               {searchText ? (
                 <RenderCards 
                   data={searchedResults}

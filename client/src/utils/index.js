@@ -13,3 +13,7 @@ export function getRandomPrompt(prompt) {
 export async function downloadImage(_id, photo) {
     FileSaver.saveAs(photo, `download-${_id}.jpg`);
 }
+
+export async function downloadImageDirect(prompt, photo) {
+    FileSaver.saveAs(photo, `download-${prompt}.jpg`);
+}
